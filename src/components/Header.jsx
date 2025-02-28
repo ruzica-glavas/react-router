@@ -1,6 +1,10 @@
+import MainNav from "./MainNav"
+
 const Header = () => {
     return (
-        <h1>Header</h1>
+        <>
+        <MainNav />
+        </>
     )
 }
 
