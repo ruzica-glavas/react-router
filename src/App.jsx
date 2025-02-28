@@ -9,9 +9,14 @@ function App() {
 
   return (
     <>
-     <HomePage></HomePage>
-     <ChiSiamo></ChiSiamo>
-     <ListaPost></ListaPost>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" Component={HomePage} />
+        <Route path="/info" Component={ChiSiamo} />
+        <Route path="/list" Component={ListaPost} />
+      </Routes>
+    </BrowserRouter>
+     
     </>
   )
 }
