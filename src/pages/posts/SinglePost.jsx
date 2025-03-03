@@ -26,13 +26,13 @@ const SinglePost = () =>{
         Titolo: {post.title}
 
        <ul>
-        {
-           post.content.map( (element, id) => {
+        {/*
+           post.map( (element, id) => {
             return(
-                <li key={id}> {element} </li>
+                <li key={id}> {element.content} </li>
             )
         }  )
-        }
+        */}
        </ul>
        
         
