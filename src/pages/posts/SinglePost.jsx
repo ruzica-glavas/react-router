@@ -6,34 +6,21 @@ const SinglePost = () =>{
     
     const {id} = useParams()
 
-    const [post, setPost] = useState ({
-        id: ``,
-        title: ``,
-        content: ``,
-        image: ``,
-        tags: []
-    })
+    const [post, setPost] = useState ({})
 
     useEffect (()=>{
         axios
         .get (`http://localhost:3000/posts/${id}`)
         .then ((res) => setPost(res.data))
         .catch (err => console.error(err));
-    }, [id])
+    }, [id]);
+
     return(
         <>
-        ID prodotto : {id}
-        Titolo: {post.title}
+        <h1>Descrizione prodotto</h1>
+        Titolo: {post.content}
 
-       <ul>
-        {/*
-           post.map( (element, id) => {
-            return(
-                <li key={id}> {element.content} </li>
-            )
-        }  )
-        */}
-       </ul>
+       
        
         
         </>

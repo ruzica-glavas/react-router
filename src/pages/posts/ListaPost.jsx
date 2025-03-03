@@ -24,7 +24,7 @@ const ListaPost = () => {
                   <div className="card">
                     <div className="card-body">
                       <h4 className="card-title">{element.title}</h4>
-                      <p className="card-text">{element.content}</p>
+                      <p className="card-text">{element.tags}</p>
                     </div>
                   </div>
                 </NavLink>
