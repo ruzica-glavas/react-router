@@ -9,7 +9,7 @@ const ListaPost = () => {
     useEffect (()=>{
         axios
         .get(`http://localhost:3000/posts/`)
-        .then ((data)=> setPosts (data))
+        .then ((res)=> setPosts (res.data))
     },[])
 
     return(
