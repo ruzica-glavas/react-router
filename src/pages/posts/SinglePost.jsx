@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
 
 const SinglePost = () =>{
@@ -15,11 +15,23 @@ const SinglePost = () =>{
         .catch (err => console.error(err));
     }, [id]);
 
+    const navigate = useNavigate()
+
     return(
         <>
         <h1>Descrizione prodotto</h1>
         Titolo: {post.content}
+        <div>
+        <button className="btn btn-primary" onClick={() => navigate (-1)}>
+            Torna indietro
+        </button>
 
+        <button className="btn btn-primary" onClick={() => navigate (`/list/${Number(id)+1}`)}>
+            Vai avanti
+        </button>
+        
+        </div>
+        
        
        
         

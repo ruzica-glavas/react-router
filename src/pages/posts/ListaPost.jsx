@@ -24,7 +24,11 @@ const ListaPost = () => {
                   <div className="card">
                     <div className="card-body">
                       <h4 className="card-title">{element.title}</h4>
-                      <p className="card-text">{element.tags}</p>
+                      <ul>
+                        <li>
+                            {element.tags.join(" - ")}
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </NavLink>
